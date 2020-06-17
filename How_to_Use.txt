@@ -1,0 +1,43 @@
+For cutting a set of short video sequences, you can use this ffmpeg command:
+ffmpeg -i Football.mp4 -ss 00:00:00 -t 00:00:03 Football_train_1.mp4
+
+###################### this is how your file should look like ############################
+/data
+--- /train
+|    |
+|    --- /Football
+|    |  Football_train_1.mp4
+|    |  Football_train_2.mp4
+|    |  ...
+|    |
+|    --- /Commercial
+|         Commercial_train_1.mp4
+|         Commercial_train_2.mp4
+|         ...
+--- /test
+|    |
+|    --- /Football
+|         Football_test_1.mp4
+|         Football_test_2.mp4
+|         ...
+|    |
+|    --- /Commercial
+|         Commercial_test_1.mp4
+|         Commercial_test_2.mp4
+|         ...
+
+###############################################################################################
+
+To exreact frames from video use command : python extract_files.py mp4
+
+To train all the frames use command : python train.py 75 2 720 1280
+
+Classify image in the video sequence use command : 
+python clasify.py 75 2 lstm-features.hdf5 video_file.mp4
+python ffmpeg-split.py -f big_video_file.mp4 -s 5  manifest.csv
+
+python classify.py 150 3 lstm-features.028-0.794.hdf5 E:\LSTM-video-classification\video_list
+
+for video_file in os.listdir(vid_dir):
+      if filename.endswith(".mp4"):   
+python clasify.py 150 3 lstm-features.028-0.794.hdf5 one.mp4 
