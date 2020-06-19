@@ -1,6 +1,6 @@
 # Video classification example with Inception and LSTM:
 
-Video classification example with Inception and LSTM. See detailed description in this blog post: https://www.apriorit.com/dev-blog/609-ai-long-short-term-memory-video-classification
+Video classification with Inception and LSTM.
 
 1. Place the videos from your dataset in data/train and data/test folders. Each video type should have its own folder
 
@@ -13,7 +13,7 @@ Video classification example with Inception and LSTM. See detailed description i
 > >		| Six
 > >		| Wicket
 
-2. Extract files from video with script extract_files.py. Pass video files extenssion as a param
+2. Extract frames from video with script extract_files.py. Pass video files extenssion as a parameter
 
 `	$ python extract_files.py mp4`
 
